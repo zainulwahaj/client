@@ -1,6 +1,7 @@
-import React from 'react';
-import Signup from './Signup'; // This links your Signup.js file
-import Login from './Login';   // This links your Login.js file
+import React from "react";
+import Signup from "./Signup";
+import Login from "./Login";
+import "./App.css";
 
 function App() {
   return (

@@ -8,12 +8,17 @@ const db = new sqlite3.Database("./users.db", (err) => {
   }
 });
 
-db.run(`
+db.run(
+  `
   CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     email TEXT UNIQUE,
     password TEXT
   )
-`);
+`,
+  (err) => {
+    if (err) console.log("DB create table error", err);
+  }
+);
 
 module.exports = db;
